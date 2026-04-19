@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = '' // TODO: 部署後填入 Google Apps Script URL
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwNzSQp_pyHuX4dDJkBWkdPikGEW6SYOPIu3ApGTMfhDfWHaYDnmAoPYligjcyrZFzdXQ/exec'
 
 interface SheetRow {
   [key: string]: string
