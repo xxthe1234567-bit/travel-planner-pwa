@@ -1,6 +1,6 @@
 // Travel Planner - Google Apps Script Backend
 
-// ===== 自动创建试算表 (Run this FIRST!) =====
+// ===== 设置函数 (Run this FIRST!) =====
 function setup() {
   var ss = SpreadsheetApp.create('Travel Planner Data');
   
@@ -45,16 +45,19 @@ function setup() {
   
   Logger.log('=== Travel Planner Data Created ===');
   Logger.log('Spreadsheet URL: ' + ss.getUrl());
-  Logger.log('Spreadsheet ID: ' + ss.getId());
+  // Spreadsheet ID is the string between /d/ and /edit
+  var url = ss.getUrl();
+  var idMatch = url.match(/\/d\/([^\/]+)\//);
+  if (idMatch) {
+    Logger.log('Spreadsheet ID: ' + idMatch[1]);
+  }
   Logger.log('');
   Logger.log('NEXT STEPS:');
-  Logger.log('1. Copy the Spreadsheet ID above');
-  Logger.log('2. Replace "YOUR_SPREADSHEET_ID" in this file');
-  Logger.log('3. Deploy as Web App (Deploy > New deployment > Web app)');
-  Logger.log('4. Copy the Web App URL to src/hooks/useGoogleSheets.ts');
+  Logger.log('1. Replace SPREADSHEET_ID below with the ID');
+  Logger.log('2. Deploy as Web App');
 }
 
-// ===== 替换为你的试算表 ID =====
+// ===== 试算表 ID =====
 var SPREADSHEET_ID = '1AF7VpGtAXXtNHECgyKKxxXCqskXKaHc0Suw0KclpIrQ';
 
 // ===== API Endpoints =====
