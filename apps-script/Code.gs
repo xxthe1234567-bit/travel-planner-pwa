@@ -45,7 +45,7 @@ function setup() {
   
   Logger.log('=== Travel Planner Data Created ===');
   Logger.log('Spreadsheet URL: ' + ss.getUrl());
-  Logger.log('Spreadsheet ID: ' + ss.getSpreadsheetId());
+  Logger.log('Spreadsheet ID: ' + ss.getId());
   Logger.log('');
   Logger.log('NEXT STEPS:');
   Logger.log('1. Copy the Spreadsheet ID above');
@@ -55,7 +55,7 @@ function setup() {
 }
 
 // ===== 替换为你的试算表 ID =====
-var SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID';
+var SPREADSHEET_ID = '1AF7VpGtAXXtNHECgyKKxxXCqskXKaHc0Suw0KclpIrQ';
 
 // ===== API Endpoints =====
 function doGet(e) {
