@@ -24,7 +24,7 @@ function setup() {
   
   // Expenses sheet
   sh = ss.insertSheet('Expenses');
-  sh.getRange('A1:I1').setValues([['id', 'date', 'amount', 'currency', 'category', 'payer', 'splitAmong', 'notes']]);
+  sh.getRange('A1:H1').setValues([['id', 'date', 'amount', 'currency', 'category', 'payer', 'splitAmong', 'notes']]);
   sh.getRange('A1:1').setFontWeight('bold');
   sh.setFrozenRows(1);
   
