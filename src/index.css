@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Noto Sans TC', 'Nunito', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-cream text-gray-700;
+    background-image: radial-gradient(circle, #D4D0C8 1px, transparent 1px);
+    background-size: 20px 20px;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-2xl font-semibold transition-all duration-100;
+    @apply active:scale-95;
+  }
+
+  .btn-primary {
+    @apply btn bg-sage text-white shadow-soft hover:shadow-soft-hover;
+  }
+
+  .btn-secondary {
+    @apply btn bg-cream-dark text-gray-700 shadow-soft-sm hover:shadow-soft;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-cream-dark/30;
+    @apply p-4;
+  }
+
+  .card-sm {
+    @apply bg-white rounded-xl shadow-soft-sm border border-cream-dark/30;
+    @apply p-3;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-cream-dark bg-white;
+    @apply focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage;
+    @apply placeholder:text-gray-400;
+  }
+
+  .input-number {
+    @apply input;
+    -moz-appearance: textfield;
+  }
+
+  .input-number::-webkit-outer-spin-button,
+  .input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
